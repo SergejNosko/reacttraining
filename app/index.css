@@ -40,3 +40,9 @@ li{
   width: 150px;
   border-radius: 50%;
 }
+.nav{
+  display: flex;
+}
+.active{
+  font-weight: bold;
+}
