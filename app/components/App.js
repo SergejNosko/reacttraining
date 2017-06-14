@@ -1,15 +1,21 @@
 const React = require('react'),
+      ReactRouter = require('react-router-dom'),
+      Router = ReactRouter.BrowserRouter,
+      Route = ReactRouter.Route,
       Popular = require('./Popular'),
-      ReactRouter = require('react-router-dom');
-let Router = ReactRouter.BrowserRouter,
-    Route = ReactRouter.Route;
+      Nav = require('./Nav'),
+      Home = require('./Home'),
+      Battle = require('./Battle');
 
 class App extends React.Component {
     render() {
         return (
             <Router>
                 <div className="container">
-                    <Rout path='/popular' component={Popular}/>
+                    <Nav/>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/battle' component={Battle}/>
+                    <Route path='/popular' component={Popular}/>
                 </div>
             </Router>
         )
