@@ -7,9 +7,11 @@ let Router = ReactRouter.BrowserRouter,
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
-                <Popular />
-            </div>
+            <Router>
+                <div className="container">
+                    <Rout path='/popular' component={Popular}/>
+                </div>
+            </Router>
         )
     }
 }
