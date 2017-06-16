@@ -106,3 +106,14 @@ a{
     font-size: 30px;
     font-weight: 200;
 }
+.reset{
+    border: none;
+    background: transparent;
+    color: #d0021b;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.reset:hover{
+    cursor: pointer;
+}
