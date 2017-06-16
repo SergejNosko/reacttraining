@@ -1,5 +1,24 @@
 const React = require('react'),
-      PropTypes = require('prop-types');
+    PropTypes = require('prop-types');
+
+function PlayerPreview(props) {
+    return(
+        <div>
+            <div className="column">
+                <img
+                    className="avatar"
+                    src={props.avatar}
+                    alt={'Avatar for ' + props.username}
+                />
+            </div>
+        </div>
+    )
+}
+PlayerPreview.propTypes = {
+  avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    onReset: PropTypes.func.isRequired
+};
 
 class PlayerInput extends React.Component {
     constructor(props) {
