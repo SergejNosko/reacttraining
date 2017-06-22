@@ -3,7 +3,8 @@ const React = require('react'),
       queryString = require('query-string'),
       api = require('../utils/api'),
       Link = require('react-router-dom').Link,
-      PlayerPreview = require('./PlayerPreview');
+      PlayerPreview = require('./PlayerPreview'),
+      Loading = require('./Loading');
 
 function Profile(props) {
     let info = props.info;
@@ -83,7 +84,7 @@ class Results extends React.Component{
             error = this.state.error,
             loading = this.state.loading;
         if(loading === true){
-            return <p>Loading</p>
+            return <Loading />
         }
 
         if(error){
